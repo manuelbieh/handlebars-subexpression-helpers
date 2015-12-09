@@ -1,11 +1,3 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-	value: true
-});
-var register = function register(Handlebars) {
-	Handlebars.registerHelper('not', function (arg1) {
-		return !arg1;
-	});
+export let register = Handlebars => {
+	Handlebars.registerHelper('not', arg1 => !arg1);
 };
-exports.register = register;

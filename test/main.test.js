@@ -9,14 +9,14 @@ describe('Main', function() {
 
         let source = `
             {{~#if (isEqual true true)}}isEqual {{/if}}
-            {{~#if (and true true true)}}isEqual {{/if}}
+            {{~#if (and true true true)}}and {{/if}}
             {{~#if (isEqual (typeof 'string') 'string')}}typeof{{/if}}`;
 
         let template = Handlebars.compile(source);
 
         let rendered = template();
 
-        assert.equal(rendered, 'isEqual typeof');
+        assert.equal(rendered, 'isEqual and typeof');
         assert.notEqual(rendered, '');
 
         done();

@@ -1,18 +1,10 @@
-'use strict';
+export let register = Handlebars => {
 
-Object.defineProperty(exports, '__esModule', {
-        value: true
-});
-var register = function register(Handlebars) {
+        Handlebars.registerHelper('and', (...args) => {
 
-        Handlebars.registerHelper('and', function () {
-                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-                        args[_key] = arguments[_key];
-                }
+                let result = true;
 
-                var result = true;
-
-                args && args.forEach(function (val) {
+                args && args.forEach(val => {
 
                         if (!!val === false) {
                                 result = false;
@@ -23,4 +15,3 @@ var register = function register(Handlebars) {
                 return result;
         });
 };
-exports.register = register;

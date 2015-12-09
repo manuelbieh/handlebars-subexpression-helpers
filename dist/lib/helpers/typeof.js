@@ -1,11 +1,3 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-	value: true
-});
-var register = function register(Handlebars) {
-	Handlebars.registerHelper('typeof', function (value) {
-		return typeof value;
-	});
+export let register = Handlebars => {
+	Handlebars.registerHelper('typeof', value => typeof value);
 };
-exports.register = register;
