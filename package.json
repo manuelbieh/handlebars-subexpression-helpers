@@ -1,0 +1,37 @@
+{
+  "name": "handlebars-subexpression-helpers",
+  "version": "1.0.0",
+  "description": "Some simple yet useful subexpression helpers for handlebars",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:mocha-babel ./test/**/*.test.js",
+    "transpile": "babel src/ -d dist/",
+    "watch": "babel src/ -w -d dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuelbieh/handlebars-helpers.git"
+  },
+  "keywords": [
+    "Handlebars",
+    "Helpers"
+  ],
+  "author": "Manuel Bieh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manuelbieh/handlebars-helpers/issues"
+  },
+  "homepage": "https://github.com/manuelbieh/handlebars-helpers#readme",
+  "dependencies": {
+    "handlebars": "^4.0.5"
+  },
+  "devDependencies": {
+    "babel": "^6.3.13",
+    "babel-runtime": "^6.3.13",
+    "mocha": "^2.3.4",
+    "mocha-babel": "^3.0.0"
+  }
+}
