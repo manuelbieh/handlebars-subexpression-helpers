@@ -6,7 +6,7 @@ require("../../dist/lib/helpers/not").register(Handlebars);
 
 describe('and', function() {
 
-    it('should all be true', (done) => {
+    it('should return true if all given values are truthy', (done) => {
 
         let source = '{{#if (and true true true)}}passed{{/if}}';
         let template = Handlebars.compile(source);
@@ -20,7 +20,7 @@ describe('and', function() {
 
     });
 
-    it('should all be true', (done) => {
+    it('should return true if all given values are truthy', (done) => {
 
         let source = '{{#if (and true (not false) true)}}passed{{/if}}';
         let template = Handlebars.compile(source);
@@ -34,7 +34,7 @@ describe('and', function() {
 
     });
 
-    it('should work with strings', (done) => {
+    it('should return true if all given values are truthy', (done) => {
 
         let source = '{{#if (and true "pass")}}passed{{/if}}';
         let template = Handlebars.compile(source);
