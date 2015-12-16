@@ -29,15 +29,19 @@ require('handlebars-subexpression-helpers').register(Handlebars);
 
 Done. Now you can use all of the included helpers.
 
-`<p>Manuel – Status: {{#if (isEqual user.status 'unconfirmed') }} Not yet activated{{/if}}</p>`
+`<p>Manuel – Status: {{#if (isEqual user.status 'unconfirmed') }} Not yet activated {{else}} Active {{/if}}</p>`
 
 If you don't need all helpers you can also require single helpers. All of them export a `register()` method which expect your Handlebars instance to be passed:
 
 ```
 var Handlebars = require('handlebars');
-require('handlebars-subexpression-helpers').register(Handlebars);
+require("handlebars-subexpression-helpers/dist/lib/helpers/is-array").register(Handlebars);
+require("handlebars-subexpression-helpers/dist/lib/helpers/typeof").register(Handlebars);
+
 ```
 
 ## List of helpers
 
-For a complete list, have a look at <a href="dist/lib/helpers">dist/lib/helpers</a>.
+For a complete list, have a look at <a href="dist/lib/helpers">dist/lib/helpers</a>. 
+
+While the filename is separated by dashes, the helper name itself is camelCase. So `is-array.js` can be used as `isArray` for example.
