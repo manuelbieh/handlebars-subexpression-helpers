@@ -4,7 +4,7 @@ import Handlebars from "handlebars";
 require("../../dist/lib/helpers/is-falsy").register(Handlebars);
 
 
-describe('isFalsy', function() {
+describe('isFalse', function() {
 
     it('should return false for undefined', (done) => {
 
