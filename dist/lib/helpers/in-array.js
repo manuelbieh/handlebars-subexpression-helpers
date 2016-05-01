@@ -7,7 +7,7 @@ var register = exports.register = function register(Handlebars) {
 
 	Handlebars.registerHelper('inArray', function (haystack, needle) {
 
-		if (typeof needle !== 'string' && typeof needle !== 'numeric') {
+		if (typeof needle !== 'string' && typeof needle !== 'number') {
 			return false;
 		}
 

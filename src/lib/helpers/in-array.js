@@ -2,7 +2,7 @@ export let register = (Handlebars) => {
 
 	Handlebars.registerHelper('inArray', (haystack, needle) => {
 
-		if(typeof needle !== 'string' && typeof needle !== 'numeric') {
+		if(typeof needle !== 'string' && typeof needle !== 'number') {
 			return false;
 		}
 
