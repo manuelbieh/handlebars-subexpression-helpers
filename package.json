@@ -1,6 +1,6 @@
 {
   "name": "handlebars-subexpression-helpers",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Some simple yet useful subexpression helpers for handlebars",
   "main": "index.js",
   "directories": {
