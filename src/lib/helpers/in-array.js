@@ -6,6 +6,10 @@ export let register = (Handlebars) => {
 			return false;
 		}
 
+		if(typeof haystack === 'string') {
+			haystack = haystack.split();
+		}
+
 		if (Object.prototype.toString.call(haystack) === '[object Array]') {
 			return haystack.indexOf(needle) !== -1;
 		}
