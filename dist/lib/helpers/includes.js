@@ -14,10 +14,6 @@ var register = exports.register = function register(Handlebars) {
 			return false;
 		}
 
-		if (typeof haystack === 'string') {
-			haystack = haystack.split();
-		}
-
 		if (['string', 'number'].indexOf(typeof haystack === 'undefined' ? 'undefined' : _typeof(haystack)) !== -1) {
 
 			return haystack.toString().includes(needle);
